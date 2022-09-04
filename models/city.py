@@ -6,7 +6,7 @@ from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """Class for the City model"""
+	"""Class for the City model"""
 
-    state_id = ""
-    name = ""
+	state_id = ""
+	name = ""
