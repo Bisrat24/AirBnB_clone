@@ -54,4 +54,4 @@ class BaseModel():
         dict_['updated_at'] = dict_['updated_at'].isoformat()
         dict_['created_at'] = dict_['created_at'].isoformat()
         dict_['__class__'] = self.__class__.__name__
-        return (dict_)
+        return dict_
