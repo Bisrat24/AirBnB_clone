@@ -22,7 +22,7 @@ class BaseModel():
     }
 
     def __init__(self, *args, **kwargs):
-        '''create uuid when instance is initialized and convert to string'''
+        # create uuid when instance is initialized and convert to string
         if len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
@@ -46,12 +46,10 @@ class BaseModel():
                                       self.__dict__))
 
     def save(self):
-	"""Method that Saves an instance"""
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-	"""Method that returns a dictionary of an instance"""
         dict_ = copy.deepcopy(self.__dict__)
         dict_['updated_at'] = dict_['updated_at'].isoformat()
         dict_['created_at'] = dict_['created_at'].isoformat()
