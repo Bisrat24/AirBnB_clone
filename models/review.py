@@ -6,8 +6,8 @@ from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-	"""Class for the Review model"""
+    """Class for the Review model"""
 
-	place_id = ""
-	user_id = ""
-	text = ""
+    place_id = ""
+    user_id = ""
+    text = ""
