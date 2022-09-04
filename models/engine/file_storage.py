@@ -13,6 +13,7 @@ from models.review import Review
 from models.state import State
 from models.user import User
 
+
 valid_classes = {'BaseModel': BaseModel,
                  'User': User,
                  'State': State,
